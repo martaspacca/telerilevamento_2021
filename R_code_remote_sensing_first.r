@@ -1,10 +1,10 @@
-# my first code in R for remote sensing
+## my first code in R for remote sensing
 
 # setwd(dir): set the directory of my work
 setwd("C:/lab/")
 
 # install.packages: download and install packages from CRAN-like repositories or from local files
-# raster data are composed of arrays of pixels (or cells), each containing a value that represents the conditions of the area covered by the cell
+## raster data are composed of arrays of pixels (or cells), each containing a value that represents the conditions of the area covered by the cell
 
 # install.packages("raster")
 library(raster)
@@ -13,10 +13,12 @@ library(raster)
 p224r63_2011 <- brick("p224r63_2011_masked.grd")
 p224r63_2011
 
+## we are studying is the indigenous reserve of Parakanã in the state of Pará, northern region of Brazil
+
 # plot: generic function for plotting of R objects
 plot(p224r63_2011)
 
-#colour change
+#colorRampPalette: establish color variation
 cl <- colorRampPalette(c("black","grey","light grey")) (100)
 plot(p224r63_2011, col=cl)
 
@@ -38,7 +40,7 @@ plot(p224r63_2011, col=cl)
 #B6_infrarosso termico
 #B7_infrarosso medio
 
-# dev.off pulirà la scheda corrente 
+# dev.off: close a graphic device
 dev.off()
 
 #plot immagine$banda_1
