@@ -1,19 +1,20 @@
-## Giorno1_
+# my first code in R for remote sensing
 
-#Il mio primo codice in R per il telerilevamento!
-
+# setwd(dir): set the directory of my work
 setwd("C:/lab/")
+
+# install.packages: download and install packages from CRAN-like repositories or from local files
+# raster data are composed of arrays of pixels (or cells), each containing a value that represents the conditions of the area covered by the cell
 
 # install.packages("raster")
 library(raster)
 
-# brick : importiamo dati dall'esterno
+# brick : import data from outside R
 p224r63_2011 <- brick("p224r63_2011_masked.grd")
 p224r63_2011
 
+# plot: generic function for plotting of R objects
 plot(p224r63_2011)
-
-## Giorno2_17/03/21
 
 #colour change
 cl <- colorRampPalette(c("black","grey","light grey")) (100)
